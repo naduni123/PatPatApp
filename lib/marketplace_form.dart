@@ -9,7 +9,7 @@ class MarketplaceForm extends StatefulWidget {
 }
 
 class _MarketplaceFormState extends State<MarketplaceForm> {
-  //Declare and assign values to dropdown list
+  //Declare and assign values
   List<String> listCategory = <String>['Category','Books','Electronics','Agriculture','Fashion & Accessories','Toys & Games'];
 
   //Declare and assign values
@@ -52,7 +52,7 @@ class _MarketplaceFormState extends State<MarketplaceForm> {
               margin: const EdgeInsets.only(left: 20,right: 20,top: 20),
               child: Column(
                 children: [
-                  //Title Input
+                  //Input Title
                   textInput(hint: "Title"),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -68,7 +68,7 @@ class _MarketplaceFormState extends State<MarketplaceForm> {
                     ],
                   ),
 
-                  //Category Dropdown
+                  //Dropdown For Categories
                   Container(
                     margin: const EdgeInsets.only(top: 10),
                     width: MediaQuery.of(context).size.width,
