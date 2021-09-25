@@ -97,11 +97,15 @@ class _MarketplaceFormState extends State<MarketplaceForm> {
                     ),
                   ),
 
-                  //SubCategory. Price per unit, Quantity, Description and Images Input
+                  //SubCategory Input
                   textInput(hint: "SubCategory"),
+                  //Price per unit Input
                   textInput(hint: "Price per unit"),
+                  //Quantity Input
                   textInput(hint: "Quantity"),
+                  //Description Input
                   textInput(hint: "Description"),
+                  //Images Input
                   textInput(hint: "Images"),
                   Container(
                     width: MediaQuery.of(context).size.width,
