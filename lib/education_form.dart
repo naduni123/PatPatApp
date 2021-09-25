@@ -34,7 +34,7 @@ class _EducationFormState extends State<EducationForm> {
           },
         ),
         centerTitle: true,
-        title: const Text("Property",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
+        title: const Text("Education",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
       ),
       body:Stack(
         children: [
