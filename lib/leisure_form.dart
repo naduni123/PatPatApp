@@ -32,7 +32,7 @@ class _LeisureFormState extends State<LeisureForm> {
           },
         ),
         centerTitle: true,
-        title: const Text("Vehicle",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
+        title: const Text("Leisure",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
       ),
       body:Stack(
         children: [
