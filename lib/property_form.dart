@@ -9,7 +9,7 @@ class PropertyForm extends StatefulWidget {
 }
 
 class _PropertyFormState extends State<PropertyForm> {
-  List<String> listPropertyType = <String>['Type','Land','Houses','Apartments','Commercial Buildings','Annexes & Rooms', 'Featured Projects'];
+  List<String> listPropertyType = <String>['Type','Land','Houses','Apartments','Commercial Buildings','Annexes' , 'Rooms', 'Featured Projects'];
 
   String dropdownPropertyType = 'Type';
   String dropdownValue= 'Type';

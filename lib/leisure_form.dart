@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:patpattest/seller_details.dart';
 
-class EducationForm extends StatefulWidget {
-  const EducationForm({Key? key}) : super(key: key);
+class LeisureForm extends StatefulWidget {
+  const LeisureForm({Key? key}) : super(key: key);
 
   @override
-  _EducationFormState createState() => _EducationFormState();
+  _LeisureFormState createState() => _LeisureFormState();
 }
 
-class _EducationFormState extends State<EducationForm> {
-  List<String> listField = <String>['Field','Information Technology','Business Studies','Engineering','Hotel','Art', 'Medical'];
-  List<String> listCourse = <String>['Course','Diploma','Higher Diploma','Undergraduate','Masters','PHD', 'Certificate'];
-  List<String> listPeriod = <String>['Period','6 Months','1 Year','2 Years','3 Years','4 Years', '5 Years'];
+class _LeisureFormState extends State<LeisureForm> {
+  List<String> listType = <String>['Type','Car','Bus','lorry','Van','Three Wheel'];
+  List<String> listPackages = <String>['Packages','Audi','BMW','Bajaj','Chery','Ford'];
+  List<String> listGroup = <String>['Group','Diesel','Electric','Hybrid','Petrol'];
 
-  String dropdownField = 'Field';
-  String dropdownCourse = 'Course';
-  String dropdownPeriod = 'Period';
+  String dropdownPackages = 'Packages';
+  String dropdownGroup = 'Group';
   String dropdownValue= 'Type';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +32,7 @@ class _EducationFormState extends State<EducationForm> {
           },
         ),
         centerTitle: true,
-        title: const Text("Education",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
+        title: const Text("Leisure",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
       ),
       body:Stack(
         children: [
@@ -51,7 +49,6 @@ class _EducationFormState extends State<EducationForm> {
               child: Column(
                 children: [
                   textInput(hint: "Title"),
-                  textInput(hint: "Institute"),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:[
@@ -61,6 +58,40 @@ class _EducationFormState extends State<EducationForm> {
                         decoration: const BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(10)),
                           color: Color(0xFFEFCFE6),
+                        ),
+                        child: DropdownButton<String>(
+                          isExpanded: true,
+                          dropdownColor: const Color(0xFFC7BAC4),
+
+                          onChanged: (String? newValue){
+                            setState(() {
+                              dropdownValue=newValue!;
+                            });
+                          },
+                          value: dropdownValue,
+                          items: listType.map<DropdownMenuItem<String>>(
+                                (String value){
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            },
+                          ).toList(),
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width/2.3,
+                        margin: const EdgeInsets.only(top: 10),
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: Color(0xFFEFCFE6),
+                        ),
+                        padding: const EdgeInsets.only(left: 20),
+                        child: TextFormField(
+                          decoration: const InputDecoration(
+                            hintText: "Capacity",
+                            border: InputBorder.none,
+                          ),
                         ),
                       ),
                     ],
@@ -84,8 +115,8 @@ class _EducationFormState extends State<EducationForm> {
                               dropdownValue=newValue!;
                             });
                           },
-                          value: dropdownField,
-                          items: listField.map<DropdownMenuItem<String>>(
+                          value: dropdownPackages,
+                          items: listPackages.map<DropdownMenuItem<String>>(
                                 (String value){
                               return DropdownMenuItem<String>(
                                 value: value,
@@ -111,8 +142,8 @@ class _EducationFormState extends State<EducationForm> {
                               dropdownValue=newValue!;
                             });
                           },
-                          value: dropdownCourse,
-                          items: listCourse.map<DropdownMenuItem<String>>(
+                          value: dropdownGroup,
+                          items: listGroup.map<DropdownMenuItem<String>>(
                                 (String value){
                               return DropdownMenuItem<String>(
                                 value: value,
@@ -124,9 +155,8 @@ class _EducationFormState extends State<EducationForm> {
                       ),
                     ],
                   ),
-
-                  textInput(hint: "Description"),
-                  textInput(hint: "Institute Contact Number"),
+                  textInput(hint: "Destination"),
+                  textInput(hint: "Expired"),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:[
@@ -140,10 +170,9 @@ class _EducationFormState extends State<EducationForm> {
                       ),
                     ],
                   ),
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children:[
+                    children: [
                       Container(
                         width: MediaQuery.of(context).size.width/2.3,
                         margin: const EdgeInsets.only(top: 10),
@@ -160,35 +189,23 @@ class _EducationFormState extends State<EducationForm> {
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.only(top: 10),
                         width: MediaQuery.of(context).size.width/2.3,
+                        margin: const EdgeInsets.only(top: 10),
                         decoration: const BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(10)),
                           color: Color(0xFFEFCFE6),
                         ),
-                        child: DropdownButton<String>(
-                          isExpanded: true,
-                          dropdownColor: const Color(0xFFC7BAC4),
-
-                          onChanged: (String? newValue){
-                            setState(() {
-                              dropdownValue=newValue!;
-                            });
-                          },
-                          value: dropdownPeriod,
-                          items: listPeriod.map<DropdownMenuItem<String>>(
-                                (String value){
-                              return DropdownMenuItem<String>(
-                                value: value,
-                                child: Text(value),
-                              );
-                            },
-                          ).toList(),
+                        padding: const EdgeInsets.only(left: 20),
+                        child: TextFormField(
+                          decoration: const InputDecoration(
+                            hintText: "Duration",
+                            border: InputBorder.none,
+                          ),
                         ),
                       ),
                     ],
                   ),
-
+                  textInput(hint: "Description"),
                   textInput(hint: "Images"),
                   Container(
                     width: MediaQuery.of(context).size.width,
