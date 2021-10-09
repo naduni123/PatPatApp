@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:patpattest/vehicle_add_list.dart';
+import 'package:patpattest/vehicle_form.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -36,7 +38,12 @@ class _HomePageState extends State<HomePage> {
                                 'https://t3.ftcdn.net/jpg/01/64/24/72/240_F_164247267_vbSG3hECAaGhMP4i7AHdFasVJOQwE4Az.jpg'),
                             child: InkWell(
                               onTap: (){
-
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const VehicleAdd(),
+                                  ),
+                                );
                               },
                             ),
                             height: 130,
