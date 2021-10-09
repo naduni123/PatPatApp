@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:patpattest/leisure_form.dart';
+import 'package:patpattest/marketplace_form.dart';
+import 'package:patpattest/property_form.dart';
+import 'package:patpattest/vehicle_form.dart';
+
+import 'education_form.dart';
 
 class PostAdPage extends StatefulWidget {
   const PostAdPage({Key? key}) : super(key: key);
@@ -36,6 +42,12 @@ class _PostAdPageState extends State<PostAdPage> {
                                   'https://t3.ftcdn.net/jpg/01/64/24/72/240_F_164247267_vbSG3hECAaGhMP4i7AHdFasVJOQwE4Az.jpg'),
                               child: InkWell(
                                 onTap: (){
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const VehicleForm(),
+                                    ),
+                                  );
 
                                 },
                               ),
@@ -68,6 +80,12 @@ class _PostAdPageState extends State<PostAdPage> {
                               image: const NetworkImage('https://image.freepik.com/free-photo/education-day-assortment-with-copy-space_23-2148721275.jpg'),
                               child: InkWell(
                                 onTap: (){
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const EducationForm(),
+                                    ),
+                                  );
 
                                 },
                               ),
@@ -102,6 +120,12 @@ class _PostAdPageState extends State<PostAdPage> {
                                       '-open-laptop-store-icon-buy-payme-payment-business-marketing-digital-network-connection-work-128335516.jpg'),
                               child: InkWell(
                                 onTap: (){
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const MarketplaceForm(),
+                                    ),
+                                  );
 
                                 },
                               ),
@@ -135,6 +159,12 @@ class _PostAdPageState extends State<PostAdPage> {
                                   'https://blog.hubspot.com/hubfs/Sales_Blog/real-estate-business-compressor.jpg'),
                               child: InkWell(
                                 onTap: (){
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const PropertyForm(),
+                                    ),
+                                  );
 
                                 },
                               ),
@@ -168,7 +198,12 @@ class _PostAdPageState extends State<PostAdPage> {
                                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThCZ9SqWdI7-7vA6-6wxaJLCpe8k9YoNb8ySWf0R_IZ-RnlqiCHJ8MTPFHskzoOUscI_U&usqp=CAU'),
                               child: InkWell(
                                 onTap: (){
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const LeisureForm(),
+                                    ),
+                                  );
                                 },
                               ),
                               height: 130,
