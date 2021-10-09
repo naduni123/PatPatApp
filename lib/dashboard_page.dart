@@ -22,7 +22,7 @@ class _DashboardPageState extends State<DashboardPage> {
     const HomePage(),
     const ProfilePage(),
     const PostAdPage(),
-    const FavouritePage(),
+    const FavouritPage(),
     const LoanPage()
 
   ];
