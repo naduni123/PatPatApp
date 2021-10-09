@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:patpattest/property_loan_form.dart';
+import 'package:patpattest/vehicle_loan_form.dart';
+
+import 'educational_loan_form.dart';
 
 class LoanPage extends StatefulWidget {
   const LoanPage({Key? key}) : super(key: key);
@@ -36,7 +40,12 @@ class _LoanPageState extends State<LoanPage> {
                                   'https://t3.ftcdn.net/jpg/01/64/24/72/240_F_164247267_vbSG3hECAaGhMP4i7AHdFasVJOQwE4Az.jpg'),
                               child: InkWell(
                                 onTap: (){
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const VehicleLoanForm(),
+                                    ),
+                                  );
                                 },
                               ),
                               height: 220,
@@ -68,6 +77,12 @@ class _LoanPageState extends State<LoanPage> {
                               image: const NetworkImage('https://image.freepik.com/free-photo/education-day-assortment-with-copy-space_23-2148721275.jpg'),
                               child: InkWell(
                                 onTap: (){
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const EducationalLoanForm(),
+                                    ),
+                                  );
 
                                 },
                               ),
@@ -101,6 +116,12 @@ class _LoanPageState extends State<LoanPage> {
                                   'https://blog.hubspot.com/hubfs/Sales_Blog/real-estate-business-compressor.jpg'),
                               child: InkWell(
                                 onTap: (){
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const PropertyLoanForm(),
+                                    ),
+                                  );
 
                                 },
                               ),
