@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:patpattest/education_add_list.dart';
+import 'package:patpattest/marketplace_add_list.dart';
+import 'package:patpattest/property_add_list.dart';
+import 'package:patpattest/property_detail_page.dart';
+import 'package:patpattest/vehicle_detail_page.dart';
 import 'package:patpattest/vehicle_form.dart';
 
 import 'dashboard_page.dart';
+import 'leisure_add_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,8 +34,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.purple,
       ),
-      //home: const DashboardPage(),
-      home: const VehicleForm(),
+      //home:const DashboardPage(),
+      home: const LeisureAdd(),
+      //home: const EducationAdd(),
+      //home: const VehicleForm(),
+      //home: const VehicleDetailPage(),
     );
   }
 }
